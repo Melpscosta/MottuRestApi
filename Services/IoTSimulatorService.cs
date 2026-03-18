@@ -18,7 +18,7 @@ namespace Mottu.Services
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            _logger.LogInformation("🤖 IoT Simulator iniciado — simulando beacons BLE a cada 60s");
+            _logger.LogInformation("IoT Simulator iniciado — simulando beacons BLE a cada 60s");
 
             // Aguarda 15s para o app inicializar antes de começar
             await Task.Delay(TimeSpan.FromSeconds(15), stoppingToken);
@@ -73,7 +73,7 @@ namespace Mottu.Services
             {
                 db.Alertas.Add(new Alerta
                 {
-                    Titulo = "⚠️ Moto em Zona Restrita",
+                    Titulo = "Moto em Zona Restrita",
                     Descricao = $"Moto {moto.Placa} ({moto.Modelo}) entrou na Zona C (restrita) sem autorização.",
                     Gravidade = GravidadeAlerta.Critico,
                     MotoId = moto.Id,
@@ -82,7 +82,7 @@ namespace Mottu.Services
             }
 
             await db.SaveChangesAsync();
-            _logger.LogInformation("📡 Beacon simulado: {Placa} Zona {Origem} → {Destino}", moto.Placa, zonaOrigem, zonaDestino);
+            _logger.LogInformation("Beacon simulado: {Placa} Zona {Origem} → {Destino}", moto.Placa, zonaOrigem, zonaDestino);
         }
     }
 }
