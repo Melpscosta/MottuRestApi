@@ -285,6 +285,11 @@ FakesAssemblies/
 .ntvs_analysis.dat
 node_modules/
 
+# Expo / React Native (pasta app/)
+app/.expo/
+app/dist/
+app/.env*.local
+
 # Visual Studio 6 build log
 *.plg
 
