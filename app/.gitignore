@@ -51,10 +51,8 @@ yarn-error.*
 coverage/
 .nyc_output/
 
-# screenshots
-*.png
-*.jpg
-*.jpeg
+# screenshots (evite *.png na raiz — impede commitar assets do Expo)
+/screenshots/
 
 # local development
 .env.local

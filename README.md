@@ -116,6 +116,18 @@ A API expõe ainda rotas para CRUD de motos (Admin), listagem de alertas, marcar
 
 ---
 
+## Deploy no Vercel (somente o app web)
+
+O Vercel hospeda o **export estático** do Expo (`npm run build:web` → pasta `app/dist`). A API **ASP.NET** na pasta `api/` **não** roda no Vercel; publique-a em [Azure](https://azure.microsoft.com/products/app-service), [Railway](https://railway.app), [Render](https://render.com) etc. e aponte o front para ela.
+
+1. No painel do Vercel: **Add New Project** → importe este repositório.
+2. Em **Root Directory**, escolha **`app`** (obrigatório: na raiz do repo existe a pasta `api/`, e o Vercel trata `/api` como funções serverless — com Root `app` isso não entra no deploy).
+3. Framework Preset: **Other** (ou deixe o `app/vercel.json` com `"framework": null`).
+4. Variáveis de ambiente: **`EXPO_PUBLIC_API_BASE_URL`** = URL pública da sua API (ex.: `https://sua-api.onrender.com`), sem barra no final.
+5. Faça o deploy; o `app/vercel.json` já define build, `dist` e rewrites para o Expo Router (SPA).
+
+---
+
 ## Licença
 
 Projeto de demonstração para portfólio.

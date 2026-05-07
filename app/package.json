@@ -3,6 +3,9 @@
   "main": "expo-router/entry",
   "version": "4.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "expo start",
     "build:web": "expo export --platform web",

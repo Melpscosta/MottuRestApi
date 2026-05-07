@@ -784,10 +784,3 @@ O sistema IoT do **Mottu - Pátio Digital** implementa uma solução completa e 
 - ✅ **Pronta para produção**: Migração para hardware real é direta
 
 O projeto demonstra domínio técnico em IoT, processamento de sinais, algoritmos geométricos e desenvolvimento de aplicações em tempo real.
-
----
-
-**Desenvolvido pela equipe Mottu**
-- Lu Vieira Santos — RM: 558935
-- Melissa Pereira — RM: 555656
-- Diego Furigo — RM: 558755
